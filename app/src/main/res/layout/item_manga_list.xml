@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/manga_name"
+        android:id="@+id/tv_manga_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Naruto"
@@ -18,24 +18,24 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:id="@+id/manga_views"
+        android:id="@+id/tv_manga_views"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="0dp"
         android:text="100000"
         app:layout_constraintLeft_toRightOf="@+id/textView5"
-        android:layout_marginLeft="25dp"
-        app:layout_constraintTop_toTopOf="@+id/textView5"
-        android:layout_marginTop="0dp" />
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/manga_last_chapter"
+        android:id="@+id/tv_manga_last_chapter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="699"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="28dp"
         android:layout_marginRight="51dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginTop="28dp"
+        android:text="699"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,6 +44,6 @@
         android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="38dp"
-        app:layout_constraintTop_toBottomOf="@+id/manga_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_manga_name"
         android:id="@+id/textView5" />
 </android.support.constraint.ConstraintLayout>

@@ -7,7 +7,7 @@
     tools:context="com.tuantai0625.mangafx.activity.MainActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/list_manga"
+        android:id="@+id/rv_manga_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
