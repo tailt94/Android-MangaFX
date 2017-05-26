@@ -9,6 +9,6 @@
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/backgroundSplashScreen</item>
     </style>
 </resources>

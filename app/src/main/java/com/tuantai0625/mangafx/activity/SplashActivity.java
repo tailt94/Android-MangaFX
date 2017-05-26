@@ -1,10 +1,11 @@
-package com.tuantai0625.mangafx;
+package com.tuantai0625.mangafx.activity;
 
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.tuantai0625.mangafx.R;
 
 public class SplashActivity extends AppCompatActivity {
 

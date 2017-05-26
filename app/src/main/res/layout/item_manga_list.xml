@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/manga_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naruto"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="29dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/manga_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100000"
+        app:layout_constraintLeft_toRightOf="@+id/textView5"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:id="@+id/manga_last_chapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="699"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="51dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lượt xem: "
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="38dp"
+        app:layout_constraintTop_toBottomOf="@+id/manga_name"
+        android:id="@+id/textView5" />
+</android.support.constraint.ConstraintLayout>

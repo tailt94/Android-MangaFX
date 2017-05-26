@@ -3,4 +3,7 @@
     <color name="colorPrimary">#092d53</color>
     <color name="colorPrimaryDark">#05182d</color>
     <color name="colorAccent">#40ffbf</color>
+
+
+    <color name="backgroundSplashScreen">#156478</color>
 </resources>
