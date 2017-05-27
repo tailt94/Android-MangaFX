@@ -22,19 +22,6 @@ public class MangaListAdapter extends RecyclerView.Adapter<MangaListAdapter.Mang
         this.mangaList = mangaList;
     }
 
-    public class MangaItemViewHolder extends RecyclerView.ViewHolder {
-        TextView tvName;
-        TextView tvViews;
-        TextView tvLastChapter;
-
-        public MangaItemViewHolder(View itemView) {
-            super(itemView);
-            tvName = (TextView) itemView.findViewById(R.id.tv_manga_name);
-            tvViews = (TextView) itemView.findViewById(R.id.tv_manga_views);
-            tvLastChapter = (TextView) itemView.findViewById(R.id.tv_manga_last_chapter);
-        }
-    }
-
     @Override
     public MangaItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
@@ -45,8 +32,8 @@ public class MangaListAdapter extends RecyclerView.Adapter<MangaListAdapter.Mang
     @Override
     public void onBindViewHolder(MangaItemViewHolder holder, int position) {
         holder.tvName.setText(mangaList.get(position).getTitle());
-        holder.tvViews.setText(mangaList.get(position).getViews().toString());
-        holder.tvLastChapter.setText(mangaList.get(position).getLastChapter().toString());
+        holder.tvViews.setText(Integer.toString(mangaList.get(position).getViews()));
+        holder.tvLastChapterDate.setText(mangaList.get(position).getLastChapterDate());
     }
 
     @Override
@@ -57,5 +44,18 @@ public class MangaListAdapter extends RecyclerView.Adapter<MangaListAdapter.Mang
     public void updateMangaList(List<Manga> list) {
         mangaList = list;
         notifyDataSetChanged();
+    }
+
+    public class MangaItemViewHolder extends RecyclerView.ViewHolder {
+        TextView tvName;
+        TextView tvViews;
+        TextView tvLastChapterDate;
+
+        public MangaItemViewHolder(View itemView) {
+            super(itemView);
+            tvName = (TextView) itemView.findViewById(R.id.text_manga_name);
+            tvViews = (TextView) itemView.findViewById(R.id.text_manga_views);
+            tvLastChapterDate = (TextView) itemView.findViewById(R.id.text_manga_last_chapter_date);
+        }
     }
 }

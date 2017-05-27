@@ -10,6 +10,6 @@ import retrofit2.http.GET;
  */
 
 public interface MangaClient {
-    @GET("list/0/")
+    @GET("list/0/?p=0")
     Call<MangaList> getMangaList();
 }

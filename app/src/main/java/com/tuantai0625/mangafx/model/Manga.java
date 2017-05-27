@@ -3,29 +3,34 @@ package com.tuantai0625.mangafx.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Lionheart on 26-May-17.
  */
 
-public class Manga {
+public class Manga implements Serializable {
     @SerializedName("t")
-    public String title;
+    private String title;
     @SerializedName("a")
-    public String alias;
+    private String alias;
     @SerializedName("i")
-    public String id;
+    private String id;
     @SerializedName("im")
-    public String image;
+    private String image;
     @SerializedName("c")
-    public List<String> categories = null;
+    private List<String> categories;
     @SerializedName("h")
-    public Integer views;
+    private int views;
     @SerializedName("ld")
-    public Integer lastChapterDate;
+    private int lastChapterDate;
     @SerializedName("s")
-    public Integer lastChapter;
+    private int status;
 
     public String getTitle() {
         return title;
@@ -51,11 +56,13 @@ public class Manga {
         return views;
     }
 
-    public Integer getLastChapterDate() {
-        return lastChapterDate;
+    public String getLastChapterDate() {
+        Date date = new Date(lastChapterDate * 1000L);
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+        return format.format(date);
     }
 
-    public Integer getLastChapter() {
-        return lastChapter;
+    public Integer getStatus() {
+        return status;
     }
 }
