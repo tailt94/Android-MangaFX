@@ -21,10 +21,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bindViews();
+
         mangas = (MangaList) getIntent()
                 .getExtras()
                 .getSerializable(SplashActivity.EXTRA_MANGA_LIST);
 
+        showMangaList(mangas);
+    }
+
+    private void bindViews() {
+        recyclerView = (RecyclerView) findViewById(R.id.rv_manga_list);
+    }
+
+    private void showMangaList(MangaList mangas) {
         mangaListAdapter = new MangaListAdapter(mangas.getMangaList());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -32,9 +41,5 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(itemDecoration);
-    }
-
-    private void bindViews() {
-        recyclerView = (RecyclerView) findViewById(R.id.rv_manga_list);
     }
 }

@@ -1,6 +1,5 @@
 package com.tuantai0625.mangafx.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
@@ -15,13 +14,13 @@ public class MangaList implements Serializable {
     private List<Manga> mangaList;
 
     @SerializedName("total")
-    private Integer mangaCount;
+    private int mangaCount;
 
     public List<Manga> getMangaList() {
         return mangaList;
     }
 
-    public Integer getMangaCount() {
+    public int getMangaCount() {
         return mangaCount;
     }
 }
