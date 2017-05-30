@@ -37,9 +37,7 @@ public class SplashActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     intent.putExtras(bundle);
-
                     startActivity(intent);
-                    finish();
                 } else {
                     int statusCode = response.code();
                     Log.e(TAG, Integer.toString(statusCode));

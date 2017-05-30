@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showMangaList(MangaList mangas) {
-        mangaListAdapter = new MangaListAdapter(mangas.getMangaList());
+        mangaListAdapter = new MangaListAdapter(this, mangas.getMangaList());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mangaListAdapter);
