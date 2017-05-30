@@ -9,11 +9,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ServiceGenerator {
-    private static final String BASE_URL = "https://www.mangaeden.com/api/";
+    public static final String BASE_IMAGE_URL = "https://cdn.mangaeden.com/mangasimg/";
+    public static String apiBaseUrl = "https://www.mangaeden.com/api/";
 
     private static Retrofit.Builder builder =
             new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
+                    .baseUrl(apiBaseUrl)
                     .addConverterFactory(GsonConverterFactory.create());
 
     private static Retrofit retrofit = builder.build();
@@ -23,5 +24,13 @@ public class ServiceGenerator {
 
     public static <S> S createService(Class<S> serviceClass) {
         return retrofit.create(serviceClass);
+    }
+
+    public static void changeApiBaseUrl(String newApiBaseUrl) {
+        apiBaseUrl = newApiBaseUrl;
+        builder = new Retrofit.Builder()
+                .baseUrl(apiBaseUrl)
+                .addConverterFactory(GsonConverterFactory.create());
+        retrofit = builder.build();
     }
 }

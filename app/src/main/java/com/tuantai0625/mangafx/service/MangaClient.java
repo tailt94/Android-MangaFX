@@ -1,5 +1,6 @@
 package com.tuantai0625.mangafx.service;
 
+import com.tuantai0625.mangafx.model.ChapterPages;
 import com.tuantai0625.mangafx.model.MangaInfo;
 import com.tuantai0625.mangafx.model.MangaList;
 
@@ -18,5 +19,10 @@ public interface MangaClient {
     @GET("manga/{id}/")
     Call<MangaInfo> getMangaInfo(
             @Path("id") String mangaId
+    );
+
+    @GET("chapter/{id}")
+    Call<ChapterPages> getChapterPages(
+            @Path("id") String chapterId
     );
 }

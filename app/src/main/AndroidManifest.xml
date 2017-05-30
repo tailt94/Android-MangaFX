@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.MangaInfoActivity"></activity>
+        <activity android:name=".activity.MangaInfoActivity" />
+        <activity android:name=".activity.MangaViewerActivity"></activity>
     </application>
 
 </manifest>
